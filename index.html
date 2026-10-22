@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es-AR" class="sin-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CoFounder · Tu socio virtual</title>
+  <meta name="description" content="Manejar tu negocio no debería ser tan difícil. CoFounder es un directorio de finanzas, marketing y operaciones para pymes argentinas que te dice qué hacer cada día.">
+
+  <!-- Vista previa al compartir el link (WhatsApp, redes) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="CoFounder">
+  <meta property="og:title" content="CoFounder · Tu socio virtual">
+  <meta property="og:description" content="Un directorio de finanzas, marketing y operaciones para tu pyme. Te dice qué hacer cada día.">
+  <meta property="og:url" content="https://cofounder.com.ar/">
+  <meta property="og:image" content="https://cofounder.com.ar/Assets/avatar-verde-caja-1080.png">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" type="image/png" href="Assets/favicon-64.png">
+  <link rel="apple-touch-icon" href="Assets/icono-app-192.png">
+  <meta name="theme-color" content="#F5F2EA">
+
+  <!-- Tipografías de la marca (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="saltar-al-contenido" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===================== ENCABEZADO ===================== -->
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="encabezado__logo" href="index.html" aria-label="CoFounder, ir al inicio">
+        <img src="Assets/logo-oscuro-para-fondos-claros-1200.png" alt="CoFounder" width="1200" height="240">
+      </a>
+      <nav class="menu" aria-label="Menú principal">
+        <ul>
+          <li><a href="#como-funciona">Cómo funciona</a></li>
+          <li><a href="demo.html">Probá la demo</a></li>
+          <li><a href="#contacto">Contactanos</a></li>
+          <li class="menu__destacado">
+            <a class="menu__escucharte" data-formulario href="https://forms.gle/L3hx7siAAM2UK2jy5" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1.1-4.6A8 8 0 1 1 21 12z"/><path d="M9 11h.01M12 11h.01M15 11h.01"/></svg>
+              Queremos escucharte
+              <span class="solo-lector">(se abre en una pestaña nueva)</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ===================== 1. HERO ===================== -->
+    <section class="hero" aria-labelledby="titulo-hero">
+      <!-- Símbolo de la marca en grande, de fondo (decorativo) -->
+      <svg class="hero__simbolo" viewBox="0 0 170 110" aria-hidden="true">
+        <circle cx="52" cy="52" r="40" fill="none" stroke="#DCD8CE" stroke-width="20" opacity="0.75"/>
+        <circle cx="112" cy="58" r="50" fill="#187A60" opacity="0.13"/>
+      </svg>
+
+      <div class="contenedor">
+        <div class="hero__contenido">
+          <!-- TITULAR: para probar otro slogan, cambiá solo este texto. -->
+          <h1 class="hero__titulo" id="titulo-hero">Tu socio virtual.</h1>
+          <p class="hero__bajada">
+            Manejar tu negocio no debería ser tan difícil. Nosotros te ayudamos a decidir qué hacer cada día.
+          </p>
+          <div class="hero__botones">
+            <a class="boton boton--principal" href="demo.html">
+              Probar la demo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="boton boton--secundario" href="#socios">Conocé a tu directorio</a>
+            <a class="boton boton--texto" href="#contacto">Contactanos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 2. CÓMO FUNCIONA ===================== -->
+    <section class="seccion" id="como-funciona" aria-labelledby="titulo-como">
+      <div class="contenedor">
+        <h2 class="seccion__titulo aparece" id="titulo-como">De tus números a una decisión</h2>
+        <p class="seccion__bajada aparece">
+          Decidir solo y sin datos ordenados sale caro. CoFounder estudia tu rubro, entiende cómo funciona tu negocio y busca dónde podés ser más eficiente. Después te dice qué hacer, en palabras simples.
+        </p>
+
+        <div class="datos-problema">
+          <p class="dato aparece">
+            <span class="dato__numero">25.000</span>
+            <span class="dato__texto">
+              empresas cerraron en Argentina desde diciembre de 2023, aproximadamente.
+              <span class="dato__fuente">Fuente: IPA, vía Perfil (junio 2026).</span>
+            </span>
+          </p>
+          <p class="dato aparece">
+            <span class="dato__numero">97%</span>
+            <span class="dato__texto">
+              de los fracasos de pymes se atribuye a mala gestión.
+              <span class="dato__fuente">Fuente: AADPyME.</span>
+            </span>
+          </p>
+        </div>
+
+        <ol class="pasos">
+          <li class="tarjeta paso aparece">
+            <div class="paso__cabecera">
+              <span class="paso__numero">01</span>
+              <svg class="paso__icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h11a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M17 9h3a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-1v3l-4-3h-3"/></svg>
+            </div>
+            <h3>Contanos tu negocio</h3>
+            <p>Respondés unas preguntas simples en un chat o subís tu planilla. Sin vueltas técnicas.</p>
+          </li>
+          <li class="tarjeta paso aparece">
+            <div class="paso__cabecera">
+              <span class="paso__numero">02</span>
+              <svg class="paso__icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M5 12v8h14v-8"/><path d="M10 20v-5h4v5"/></svg>
+            </div>
+            <h3>Estudia tu rubro</h3>
+            <p>Aprende cómo funciona tu rubro: temporadas, márgenes, qué se vende y cuándo. Y busca dónde podés ganar más con lo mismo.</p>
+          </li>
+          <li class="tarjeta paso aparece">
+            <div class="paso__cabecera">
+              <span class="paso__numero">03</span>
+              <svg class="paso__icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+            </div>
+            <h3>Suma el contexto país</h3>
+            <p>Inflación, dólar, tasas, aguinaldo y vencimientos: todo entra en la cuenta, porque acá cambia todos los meses.</p>
+          </li>
+          <li class="tarjeta paso aparece">
+            <div class="paso__cabecera">
+              <span class="paso__numero">04</span>
+              <svg class="paso__icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l2 2 4-4"/><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 17h8"/></svg>
+            </div>
+            <h3>Tu directorio te arma el plan</h3>
+            <p>Tu CFO, tu CMO y tu COO lo analizan juntos y te dicen qué hacer hoy, explicándote el porqué.</p>
+          </li>
+        </ol>
+
+        <div class="aprende aparece">
+          <span class="aprende__icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
+          </span>
+          <div>
+            <strong>Cada vez te conoce mejor</strong>
+            <p>Tu directorio aprende de tu negocio: con cada mes de datos y cada decisión que tomás, entiende más cómo funciona y te da planes más precisos.</p>
+          </div>
+        </div>
+
+        <div class="garantias">
+          <div class="tarjeta garantia aparece">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
+              Hecho para la Argentina
+            </h3>
+            <ul>
+              <li>Aguinaldo, sueldos e impuestos dentro de la proyección de caja.</li>
+              <li>Ventas medidas descontando la inflación, para saber si de verdad crecés.</li>
+              <li>Pensado para la realidad pyme: monotributo, IVA, eCheq y factura de crédito MiPyME.</li>
+            </ul>
+          </div>
+          <div class="tarjeta garantia aparece">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+              Tus datos son tuyos
+            </h3>
+            <p>Tus números se guardan cifrados en tu cuenta, separados de los de cualquier otra empresa: nadie más puede verlos. Los podés exportar o borrar cuando quieras, como marca la Ley 25.326 de protección de datos personales.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 3. TUS NUEVOS SOCIOS ===================== -->
+    <section class="seccion" id="socios" aria-labelledby="titulo-socios">
+      <div class="contenedor">
+        <h2 class="seccion__titulo aparece" id="titulo-socios">Conocé a tus nuevos socios</h2>
+        <p class="seccion__bajada aparece">
+          Tres socios que trabajan para vos todos los días. No solo te dicen qué hacer: te explican por qué, para que cada vez decidas mejor.
+        </p>
+
+        <div class="socios">
+          <!-- Tu CFO -->
+          <article class="tarjeta socio aparece">
+            <svg class="socio__avatar" viewBox="0 0 160 100" aria-hidden="true">
+              <circle cx="110" cy="50" r="50" fill="#187A60"/>
+              <circle cx="50" cy="50" r="40" fill="none" stroke="#0F2524" stroke-width="20"/>
+            </svg>
+            <h3 class="socio__titulo">Tu CFO</h3>
+            <p class="etiqueta socio__area">Finanzas · caja, costos y precios</p>
+            <p class="socio__texto">
+              Mira tu caja, tus costos y tus precios. Te avisa antes de que la plata no alcance y te propone cómo evitarlo.
+            </p>
+            <p class="socio__ensena">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8l10-5 10 5-10 5z"/><path d="M6 10v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+              <span><strong>Te enseña</strong> a leer tus números y a poner precios que te dejen ganancia.</span>
+            </p>
+            <p class="socio__pregunta">“¿Llego al aguinaldo sin quedar en rojo?”</p>
+          </article>
+
+          <!-- Tu CMO -->
+          <article class="tarjeta socio aparece">
+            <svg class="socio__avatar" viewBox="0 0 160 100" aria-hidden="true">
+              <circle cx="110" cy="50" r="50" fill="#187A60"/>
+              <circle cx="50" cy="50" r="40" fill="none" stroke="#0F2524" stroke-width="20"/>
+            </svg>
+            <h3 class="socio__titulo">Tu CMO</h3>
+            <p class="etiqueta socio__area">Marketing · clientes y ventas</p>
+            <p class="socio__texto">
+              Mira tus ventas y tus clientes. Te dice qué oferta hacer, qué publicar y dónde vender para que te elijan más.
+            </p>
+            <p class="socio__ensena">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8l10-5 10 5-10 5z"/><path d="M6 10v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+              <span><strong>Te enseña</strong> qué productos te convienen y cómo conseguir clientes nuevos.</span>
+            </p>
+            <p class="socio__pregunta">“¿Qué promo lanzo esta semana?”</p>
+          </article>
+
+          <!-- Tu COO -->
+          <article class="tarjeta socio aparece">
+            <svg class="socio__avatar" viewBox="0 0 160 100" aria-hidden="true">
+              <circle cx="110" cy="50" r="50" fill="#187A60"/>
+              <circle cx="50" cy="50" r="40" fill="none" stroke="#0F2524" stroke-width="20"/>
+            </svg>
+            <h3 class="socio__titulo">Tu COO</h3>
+            <p class="etiqueta socio__area">Operaciones · stock y proveedores</p>
+            <p class="socio__texto">
+              Ordena tu día a día: stock, proveedores y procesos. Cada mañana te arma una lista corta de qué hacer.
+            </p>
+            <p class="socio__ensena">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8l10-5 10 5-10 5z"/><path d="M6 10v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+              <span><strong>Te enseña</strong> a organizarte para que el negocio no dependa de que estés en todo.</span>
+            </p>
+            <p class="socio__pregunta">“¿Qué hago hoy para mejorar mi negocio?”</p>
+          </article>
+        </div>
+
+        <p class="socios__cierre aparece">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4M9 15l2 2 4-4"/></svg>
+          Cada día, qué hacer para mejorar tu negocio.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== 4. BANNER A LA DEMO ===================== -->
+    <section class="seccion" id="demo" aria-labelledby="titulo-banner">
+      <div class="contenedor">
+        <div class="banner aparece">
+          <svg class="banner__simbolo" viewBox="0 0 170 110" aria-hidden="true">
+            <circle cx="52" cy="55" r="40" fill="none" stroke="#F5F2EA" stroke-width="18" opacity="0.08"/>
+            <circle cx="112" cy="55" r="50" fill="#5FD3A8" opacity="0.12"/>
+          </svg>
+          <div class="banner__contenido">
+            <p class="etiqueta">Tu pyme no está sola</p>
+            <h2 class="banner__titulo" id="titulo-banner">¿Querés ver a tu directorio en acción?</h2>
+            <p class="banner__nota">Probá la vista previa con un negocio de ejemplo. Son datos ilustrativos: CoFounder está en desarrollo.</p>
+            <div class="banner__botones">
+              <a class="boton boton--brote" href="demo.html">
+                Probar la demo
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a class="boton boton--claro" data-formulario href="https://forms.gle/L3hx7siAAM2UK2jy5" target="_blank" rel="noopener">
+                Queremos escucharte
+                <span class="solo-lector">(se abre en una pestaña nueva)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 5. CONTACTO ===================== -->
+    <section class="seccion" id="contacto" aria-labelledby="titulo-contacto">
+      <div class="contenedor">
+        <h2 class="seccion__titulo aparece" id="titulo-contacto">Hablemos</h2>
+        <p class="seccion__bajada aparece">Estamos desarrollando CoFounder junto a dueños de pymes como vos. Contanos de tu negocio y te avisamos cuando puedas probarlo.</p>
+
+        <div class="contacto">
+          <div class="tarjeta contacto__escucharte aparece">
+            <p class="etiqueta contacto__etiqueta">Queremos escucharte</p>
+            <h3>Contanos cómo es tu negocio</h3>
+            <p>Son unas pocas preguntas. Con tus respuestas armamos un CoFounder que sirva de verdad para pymes como la tuya.</p>
+            <a class="boton" data-formulario href="https://forms.gle/L3hx7siAAM2UK2jy5" target="_blank" rel="noopener">
+              Completar el formulario
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              <span class="solo-lector">(se abre en una pestaña nueva)</span>
+            </a>
+          </div>
+
+          <div class="tarjeta aparece">
+            <p class="contacto__nombre" id="contacto-nombre">Santino Ciavirella</p>
+            <p class="contacto__rol">Cofundador de CoFounder</p>
+            <!-- Se completa desde js/config.js -->
+            <ul class="contacto__lista" id="lista-contacto"></ul>
+          </div>
+        </div>
+
+        <div class="redes aparece">
+          <h3 class="redes__titulo">Seguinos en redes</h3>
+          <p class="redes__texto">Subimos contenido sobre economía, cómo manejar tu pyme, cómo usar CoFounder, el detrás de escena de cómo lo construimos y todo lo que se viene.</p>
+          <!-- Se completa desde js/config.js -->
+          <ul class="redes__lista" id="lista-redes"></ul>
+          <noscript><p>Buscanos como @cofounder_ok en Instagram y @cofounderAI en X y YouTube.</p></noscript>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== PIE ===================== -->
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie__fila">
+        <div>
+          <a class="pie__logo" href="index.html" aria-label="CoFounder, ir al inicio">
+            <img src="Assets/logo-claro-para-fondos-oscuros-1200.png" alt="CoFounder" width="1200" height="240" loading="lazy">
+          </a>
+          <p class="pie__tagline">Tu socio virtual.</p>
+        </div>
+        <p class="pie__datos">
+          cofounder.com.ar<br>
+          <a href="mailto:ciavirellasantino@gmail.com">ciavirellasantino@gmail.com</a>
+        </p>
+      </div>
+      <p class="pie__legal">© <span id="anio">2026</span> CoFounder. Hecho en Argentina para pymes argentinas.</p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
