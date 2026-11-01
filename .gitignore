@@ -5,3 +5,6 @@
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Paquete del sitio (se regenera, no va al repo)
+*.zip
