@@ -2175,3 +2175,165 @@ body.bloqueado {
     display: block;
   }
 }
+
+/* ---------- Finanzas: plata para separar ---------- */
+.reservas__total {
+  margin-bottom: 14px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: var(--tinta);
+  color: var(--hueso);
+}
+.reservas__total span {
+  display: block;
+  font-size: 0.82rem;
+  color: rgba(245, 242, 234, 0.8);
+}
+.reservas__total strong {
+  display: block;
+  font-family: var(--fuente-datos);
+  font-weight: 500;
+  font-size: 1.7rem;
+  color: var(--verde-brote);
+}
+.reservas__total small {
+  font-size: 0.78rem;
+  color: rgba(245, 242, 234, 0.8);
+}
+.reservas,
+.proveedores,
+.fijos,
+.cada100__lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.reservas {
+  display: grid;
+  gap: 14px;
+}
+.reservas__fila,
+.proveedores__fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.92rem;
+}
+.reservas__fila strong,
+.proveedores__fila strong {
+  font-family: var(--fuente-datos);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.reservas__nombre small,
+.proveedores__nombre small {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--grafito);
+}
+.reservas__detalle {
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: var(--grafito);
+}
+
+/* ---------- Finanzas: proveedores ---------- */
+.proveedores {
+  display: grid;
+  gap: 8px;
+}
+.proveedores li {
+  padding: 12px 14px;
+  border: 1px solid var(--linea);
+  border-radius: 10px;
+  background: var(--hueso);
+}
+.proveedores__nombre {
+  font-weight: 500;
+}
+.proveedores__pie {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+  font-size: 0.78rem;
+  color: var(--grafito);
+}
+
+/* ---------- Finanzas: de cada $100 ---------- */
+.cada100__barra {
+  display: flex;
+  height: 22px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.cada100__barra span {
+  display: block;
+  height: 100%;
+}
+.cada100__barra span + span {
+  border-left: 2px solid var(--blanco);
+}
+.cada100__lista {
+  display: grid;
+  gap: 2px;
+}
+.cada100__lista li {
+  display: grid;
+  grid-template-columns: 12px 1fr auto auto;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 6px;
+  border-bottom: 1px solid var(--linea);
+  font-size: 0.9rem;
+}
+.cada100__lista i {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+.cada100__lista strong {
+  font-family: var(--fuente-datos);
+  font-weight: 500;
+}
+.cada100__lista small {
+  min-width: 64px;
+  text-align: right;
+  font-size: 0.78rem;
+  color: var(--grafito);
+}
+.cada100__lista li.cada100__ganancia {
+  font-weight: 600;
+  background: var(--bien-fondo);
+  border-radius: 8px;
+  border-bottom: 0;
+}
+
+/* ---------- Finanzas: gastos fijos ---------- */
+.fijos li {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 4px;
+  border-bottom: 1px solid var(--linea);
+  font-size: 0.9rem;
+}
+.fijos strong {
+  font-family: var(--fuente-datos);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.fijos li.fijos__total {
+  border-bottom: 0;
+  font-weight: 600;
+}
+.fijos li.fijos__nota {
+  display: block;
+  border: 0;
+  padding-top: 4px;
+  font-size: 0.8rem;
+  color: var(--grafito);
+}

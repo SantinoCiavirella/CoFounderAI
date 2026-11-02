@@ -359,7 +359,7 @@
       ["Equipo", n.equipo],
       ["Condición fiscal", n.condicionFiscal],
       ["Ventas de octubre", pesosCorto(ultimo.ventas)],
-      ["Clientes en el mes", numero(ultimo.clientes)],
+      ["Ventas por día", "≈ " + numero(ultimo.tickets / 31)],
       ["Plata disponible hoy", pesosCorto(D.caja)],
     ];
     $("#bv-datos").innerHTML = datos.map(function (d) {
@@ -434,7 +434,7 @@
     var tarjetas = [
       { icono: ICONOS.caja, valor: pesosCorto(ultimo.ventas), nombre: "Ventas de octubre", serie: M.map(function (m) { return m.ventas; }), cambio: variacion(ultimo.ventas, anterior.ventas), subirEsBueno: true },
       { icono: ICONOS.bolsa, valor: numero(ultimo.tickets), nombre: "Ventas (tickets) del mes", serie: M.map(function (m) { return m.tickets; }), cambio: variacion(ultimo.tickets, anterior.tickets), subirEsBueno: true },
-      { icono: ICONOS.personas, valor: numero(ultimo.clientes), nombre: "Clientes activos", serie: M.map(function (m) { return m.clientes; }), cambio: variacion(ultimo.clientes, anterior.clientes), subirEsBueno: true },
+      { icono: ICONOS.personas, valor: numero(ultimo.clientes), nombre: "Clientes registrados que compraron", serie: M.map(function (m) { return m.clientes; }), cambio: variacion(ultimo.clientes, anterior.clientes), subirEsBueno: true },
       { icono: ICONOS.recibo, valor: pesosCorto(gastos(ultimo)), nombre: "Gastos del mes", serie: M.map(gastos), cambio: variacion(gastos(ultimo), gastos(anterior)), subirEsBueno: false },
     ];
     var cont = $("#kpis");
@@ -643,6 +643,60 @@
         '<span class="calendario__monto ' + (c.monto < 0 ? "baja" : "sube") + '">' + (c.monto > 0 ? "+" : "") + pesosCorto(c.monto) + "</span></li>";
     }).join("");
 
+    // Plata para separar
+    var totalNov = D.reservas.reduce(function (t, r) { return t + r.noviembre; }, 0);
+    $("#reservas-total").innerHTML = "<span>Para separar en noviembre</span><strong>" + pesosCorto(totalNov) + "</strong>" +
+      "<small>Hoy separado: $0 · sale de la caja ($18,6 M) y de lo que vendas</small>";
+    $("#reservas").innerHTML = D.reservas.map(function (r) {
+      return '<li><div class="reservas__fila"><span class="reservas__nombre">' + escapar(r.nombre) +
+        "<small>" + escapar(pesosCorto(r.total)) + " · " + escapar(r.cuando) + "</small></span>" +
+        "<strong>" + pesosCorto(r.noviembre) + "</strong></div>" +
+        '<div class="costos__barra" aria-hidden="true"><span style="width:' + ((r.noviembre / totalNov) * 100).toFixed(1) + '%"></span></div>' +
+        '<p class="reservas__detalle">' + escapar(r.detalle) + "</p></li>";
+    }).join("");
+    $("#reserva-normal").textContent = D.reservaMesNormal;
+
+    // Proveedores y distribuidores
+    var totalProv = D.proveedores.reduce(function (t, p) { return t + p.monto; }, 0);
+    $("#proveedores-sub").textContent = "Compras de octubre: " + pesosCorto(totalProv) + " (" + porcentaje((totalProv / ultimo.ventas) * 100) + " de lo que vendés)";
+    $("#proveedores").innerHTML = D.proveedores.slice().sort(function (a, b) { return b.monto - a.monto; }).map(function (p) {
+      var chip = p.suba > 5.6 ?
+        '<span class="chip chip--atencion">' + ICONOS.sube + "+" + p.suba + "% · más que la inflación</span>" :
+        '<span class="chip chip--neutro">+' + p.suba + "%</span>";
+      return '<li><div class="proveedores__fila"><span class="proveedores__nombre">' + escapar(p.nombre) + "<small>" + escapar(p.que) + "</small></span>" +
+        "<strong>" + pesosCorto(p.monto) + "</strong></div>" +
+        '<div class="proveedores__pie"><span>' + escapar(p.entrega) + "</span><span>" + escapar(p.condicion) + "</span>" + chip + "</div></li>";
+    }).join("");
+
+    // De cada $100 que vendés
+    var partes = [
+      { nombre: "Mercadería e insumos", valor: ultimo.insumos, color: "#187A60" },
+      { nombre: "Sueldos y cargas", valor: ultimo.sueldos, color: "#0F2524" },
+      { nombre: "Alquiler", valor: ultimo.alquiler, color: "#3D4F4E" },
+      { nombre: "Luz, gas y otros fijos", valor: ultimo.otros, color: "#8A9896" },
+      { nombre: "Impuestos", valor: ultimo.impuestos, color: "#D98E1F" },
+      { nombre: "Publicidad", valor: ultimo.publicidad, color: "#9A5F0A" },
+    ];
+    var gastado = partes.reduce(function (t, x) { return t + x.valor; }, 0);
+    partes.push({ nombre: "Lo que te queda (ganancia)", valor: ultimo.ventas - gastado, color: "#5FD3A8", ganancia: true });
+    $("#cada100").innerHTML =
+      '<div class="cada100__barra" aria-hidden="true">' +
+      partes.map(function (x) { return '<span style="width:' + ((x.valor / ultimo.ventas) * 100).toFixed(2) + "%;background:" + x.color + '"></span>'; }).join("") + "</div>" +
+      '<ul class="cada100__lista">' + partes.map(function (x) {
+        var deCien = (x.valor / ultimo.ventas) * 100;
+        return "<li" + (x.ganancia ? ' class="cada100__ganancia"' : "") + '><i style="background:' + x.color + '"></i><span>' + escapar(x.nombre) + "</span>" +
+          "<strong>$" + deCien.toFixed(1).replace(".", ",") + "</strong><small>" + pesosCorto(x.valor) + "</small></li>";
+      }).join("") + "</ul>";
+
+    // Gastos fijos
+    var totalFijos = D.gastosFijos.reduce(function (t, g) { return t + g.monto; }, 0);
+    $("#fijos").innerHTML = D.gastosFijos.map(function (g) {
+      return "<li><span>" + escapar(g.nombre) + "</span><strong>" + pesos(g.monto) + "</strong></li>";
+    }).join("") +
+      '<li class="fijos__total"><span>Total por mes</span><strong>' + pesos(totalFijos) + "</strong></li>" +
+      '<li class="fijos__nota">Sin contar sueldos (' + pesosCorto(ultimo.sueldos) + "). Con sueldos, los gastos fijos son " +
+      pesosCorto(totalFijos + ultimo.sueldos) + " por mes: unos " + pesosCorto((totalFijos + ultimo.sueldos) / 30) + " por día.</li>";
+
     $("#cobros").innerHTML = D.cobros.map(function (c) {
       return '<li><span class="cuentas__nombre">' + escapar(c.nombre) + "</span>" +
         '<span class="cuentas__estado' + (c.vencida ? " vencida" : "") + '">' + escapar(c.estado) + "</span>" +
@@ -675,9 +729,9 @@
     });
 
     grafico($("#grafico-clientes"), {
-      descripcion: "Clientes activos por mes",
+      descripcion: "Clientes registrados que compraron cada mes",
       etiquetas: M.map(function (m) { return m.corto; }),
-      series: [{ nombre: "Clientes activos", valores: M.map(function (m) { return m.clientes; }), color: "#187A60" }],
+      series: [{ nombre: "Clientes registrados", valores: M.map(function (m) { return m.clientes; }), color: "#187A60" }],
       formatoEje: function (v) { return numero(v); },
       alto: 220,
       tabla: {

@@ -26,7 +26,7 @@ window.DEMO_DATOS = {
       "Llegar tranquila a fin de año con el aguinaldo y que no me sigan subiendo los insumos.",
     // Lo que "cargó" Lucía en CoFounder (para que se entienda de dónde salen los números)
     cargo: [
-      "Ventas, tickets y clientes de los últimos 12 meses",
+      "Ventas, cantidad de tickets y clientes registrados de los últimos 12 meses",
       "Gastos de cada mes: insumos, sueldos, alquiler, impuestos y publicidad",
       "Plata disponible hoy: $18.600.000 entre caja, bancos y billeteras",
       "Lo que le deben sus clientes y lo que debe a proveedores",
@@ -34,20 +34,22 @@ window.DEMO_DATOS = {
   },
 
   // ---------- Historia de 12 meses (lo que cargó la dueña) ----------
+  // tickets = ventas del mes en el mostrador y a mayoristas (≈ 180 por día)
+  // clientes = clientes registrados (WhatsApp o cuenta corriente) que compraron ese mes
   // real = ventas descontada la inflación, en pesos de octubre 2026
   meses: [
-    { mes: "nov 2025", corto: "nov", ventas: 22459000, tickets: 1935, clientes: 702, nuevos: 74, insumos: 7075000, sueldos: 7661000, alquiler: 1920000, impuestos: 1572000, otros: 1841000, publicidad: 324000, merma: 368000, real: 29092240 },
-    { mes: "dic 2025", corto: "dic", ventas: 27620000, tickets: 2311, clientes: 708, nuevos: 71, insumos: 8700000, sueldos: 7661000, alquiler: 1920000, impuestos: 1933000, otros: 1901000, publicidad: 333000, merma: 435000, real: 34803051 },
-    { mes: "ene 2026", corto: "ene", ventas: 20034000, tickets: 1625, clientes: 716, nuevos: 69, insumos: 6311000, sueldos: 7661000, alquiler: 1920000, impuestos: 1402000, otros: 1964000, publicidad: 342000, merma: 322000, real: 24532733 },
-    { mes: "feb 2026", corto: "feb", ventas: 21788000, tickets: 1714, clientes: 731, nuevos: 96, insumos: 6885000, sueldos: 8363000, alquiler: 2090000, impuestos: 1525000, otros: 2030000, publicidad: 352000, merma: 337000, real: 25928671 },
-    { mes: "mar 2026", corto: "mar", ventas: 24531000, tickets: 1863, clientes: 668, nuevos: 58, insumos: 7752000, sueldos: 8363000, alquiler: 2090000, impuestos: 1717000, otros: 2107000, publicidad: 364000, merma: 426000, real: 28233037 },
-    { mes: "abr 2026", corto: "abr", ventas: 25934000, tickets: 1916, clientes: 684, nuevos: 62, insumos: 8221000, sueldos: 8363000, alquiler: 2090000, impuestos: 1815000, otros: 2171000, publicidad: 374000, merma: 444000, real: 29091392 },
-    { mes: "may 2026", corto: "may", ventas: 27009000, tickets: 1950, clientes: 699, nuevos: 70, insumos: 8589000, sueldos: 8884000, alquiler: 2220000, impuestos: 1891000, otros: 2226000, publicidad: 382000, merma: 455000, real: 29674113 },
-    { mes: "jun 2026", corto: "jun", ventas: 27792000, tickets: 1965, clientes: 712, nuevos: 73, insumos: 8838000, sueldos: 8884000, alquiler: 2220000, impuestos: 1945000, otros: 2277000, publicidad: 389000, merma: 460000, real: 29965040 },
-    { mes: "jul 2026", corto: "jul", ventas: 28790000, tickets: 1990, clientes: 718, nuevos: 71, insumos: 9270000, sueldos: 8884000, alquiler: 2220000, impuestos: 2015000, otros: 2334000, publicidad: 397000, merma: 510000, real: 30402618 },
-    { mes: "ago 2026", corto: "ago", ventas: 27745000, tickets: 1882, clientes: 709, nuevos: 66, insumos: 9073000, sueldos: 9400000, alquiler: 2350000, impuestos: 1942000, otros: 2384000, publicidad: 404000, merma: 526000, real: 28809326 },
-    { mes: "sep 2026", corto: "sep", ventas: 27884000, tickets: 1851, clientes: 698, nuevos: 63, insumos: 9313000, sueldos: 9400000, alquiler: 2350000, impuestos: 1952000, otros: 2441000, publicidad: 412000, merma: 568000, real: 28413796 },
-    { mes: "oct 2026", corto: "oct", ventas: 28297000, tickets: 1837, clientes: 689, nuevos: 61, insumos: 9876000, sueldos: 9400000, alquiler: 2350000, impuestos: 1981000, otros: 2500000, publicidad: 420000, merma: 652000, real: 28297000 },
+    { mes: "nov 2025", corto: "nov", ventas: 22459000, tickets: 5805, clientes: 702, nuevos: 74, insumos: 7075000, sueldos: 7661000, alquiler: 1920000, impuestos: 1572000, otros: 1841000, publicidad: 324000, merma: 368000, real: 29092240 },
+    { mes: "dic 2025", corto: "dic", ventas: 27620000, tickets: 6933, clientes: 708, nuevos: 71, insumos: 8700000, sueldos: 7661000, alquiler: 1920000, impuestos: 1933000, otros: 1901000, publicidad: 333000, merma: 435000, real: 34803051 },
+    { mes: "ene 2026", corto: "ene", ventas: 20034000, tickets: 4875, clientes: 716, nuevos: 69, insumos: 6311000, sueldos: 7661000, alquiler: 1920000, impuestos: 1402000, otros: 1964000, publicidad: 342000, merma: 322000, real: 24532733 },
+    { mes: "feb 2026", corto: "feb", ventas: 21788000, tickets: 5142, clientes: 731, nuevos: 96, insumos: 6885000, sueldos: 8363000, alquiler: 2090000, impuestos: 1525000, otros: 2030000, publicidad: 352000, merma: 337000, real: 25928671 },
+    { mes: "mar 2026", corto: "mar", ventas: 24531000, tickets: 5589, clientes: 668, nuevos: 58, insumos: 7752000, sueldos: 8363000, alquiler: 2090000, impuestos: 1717000, otros: 2107000, publicidad: 364000, merma: 426000, real: 28233037 },
+    { mes: "abr 2026", corto: "abr", ventas: 25934000, tickets: 5748, clientes: 684, nuevos: 62, insumos: 8221000, sueldos: 8363000, alquiler: 2090000, impuestos: 1815000, otros: 2171000, publicidad: 374000, merma: 444000, real: 29091392 },
+    { mes: "may 2026", corto: "may", ventas: 27009000, tickets: 5850, clientes: 699, nuevos: 70, insumos: 8589000, sueldos: 8884000, alquiler: 2220000, impuestos: 1891000, otros: 2226000, publicidad: 382000, merma: 455000, real: 29674113 },
+    { mes: "jun 2026", corto: "jun", ventas: 27792000, tickets: 5895, clientes: 712, nuevos: 73, insumos: 8838000, sueldos: 8884000, alquiler: 2220000, impuestos: 1945000, otros: 2277000, publicidad: 389000, merma: 460000, real: 29965040 },
+    { mes: "jul 2026", corto: "jul", ventas: 28790000, tickets: 5970, clientes: 718, nuevos: 71, insumos: 9270000, sueldos: 8884000, alquiler: 2220000, impuestos: 2015000, otros: 2334000, publicidad: 397000, merma: 510000, real: 30402618 },
+    { mes: "ago 2026", corto: "ago", ventas: 27745000, tickets: 5646, clientes: 709, nuevos: 66, insumos: 9073000, sueldos: 9400000, alquiler: 2350000, impuestos: 1942000, otros: 2384000, publicidad: 404000, merma: 526000, real: 28809326 },
+    { mes: "sep 2026", corto: "sep", ventas: 27884000, tickets: 5553, clientes: 698, nuevos: 63, insumos: 9313000, sueldos: 9400000, alquiler: 2350000, impuestos: 1952000, otros: 2441000, publicidad: 412000, merma: 568000, real: 28413796 },
+    { mes: "oct 2026", corto: "oct", ventas: 28297000, tickets: 5511, clientes: 689, nuevos: 61, insumos: 9876000, sueldos: 9400000, alquiler: 2350000, impuestos: 1981000, otros: 2500000, publicidad: 420000, merma: 652000, real: 28297000 },
   ],
 
   caja: 18600000,
@@ -92,6 +94,38 @@ window.DEMO_DATOS = {
     { nombre: "Lácteos Don Tito (manteca y crema)", monto: 2240000, estado: "Vence 13 nov" },
     { nombre: "Distribuidora Azul (packaging)", monto: 780000, estado: "Vence 20 nov" },
     { nombre: "Frutas Secas del Valle (insumos pan dulce)", monto: 7600000, estado: "Vence 6 ene" },
+  ],
+
+  // ---------- Proveedores y distribuidores (compras de octubre) ----------
+  // suba = cuánto aumentó lo que le cobra desde julio (la inflación fue 5,6%)
+  proveedores: [
+    { nombre: "Molinos La Pradera", que: "Harina", entrega: "2 veces por semana", condicion: "Paga a 15 días", monto: 3950000, suba: 9 },
+    { nombre: "Lácteos Don Tito", que: "Manteca, crema y leche", entrega: "3 veces por semana", condicion: "Contado", monto: 2370000, suba: 7 },
+    { nombre: "Distribuidora El Granero", que: "Azúcar, huevos y levadura", entrega: "Una vez por semana", condicion: "Paga a 7 días", monto: 1580000, suba: 5 },
+    { nombre: "Distribuidora Azul", que: "Bolsas, cajas y papel", entrega: "Cada 15 días", condicion: "Paga a 30 días", monto: 996000, suba: 4 },
+    { nombre: "Frutas Secas del Valle", que: "Frutas secas y chocolate", entrega: "Una vez por mes", condicion: "Paga a 30 días", monto: 980000, suba: 6 },
+  ],
+
+  // ---------- Plata para separar (reservas) ----------
+  // total = lo que hay que juntar · cuando = fecha del pago · noviembre = lo que conviene separar este mes
+  reservas: [
+    { nombre: "Aguinaldo de diciembre", total: 4900000, cuando: "18 dic", noviembre: 3000000, detalle: "$693 mil por semana. Todavía no hay nada separado." },
+    { nombre: "Frutas secas del pan dulce", total: 7600000, cuando: "6 ene", noviembre: 3800000, detalle: "La mitad en noviembre y la mitad en diciembre." },
+    { nombre: "Vacaciones del equipo", total: 1600000, cuando: "ene y feb", noviembre: 530000, detalle: "Repartido en noviembre, diciembre y enero." },
+    { nombre: "Fondo para imprevistos", total: 5000000, cuando: "Sin fecha", noviembre: 850000, detalle: "3% de lo que vendés, para el horno, las heladeras o una rotura." },
+  ],
+  reservaMesNormal: "En un mes sin aguinaldo ni compras de temporada, conviene separar unos $1,8 M: $817 mil para el aguinaldo, $133 mil para vacaciones y $850 mil para imprevistos. Es casi todo lo que La Espiga gana en un mes.",
+
+  // ---------- Gastos fijos del mes (octubre) ----------
+  gastosFijos: [
+    { nombre: "Alquiler del local", monto: 2350000 },
+    { nombre: "Luz (hornos y heladeras)", monto: 820000 },
+    { nombre: "Gas", monto: 640000 },
+    { nombre: "Contador", monto: 380000 },
+    { nombre: "Mantenimiento y limpieza", monto: 300000 },
+    { nombre: "Seguro del local", monto: 210000 },
+    { nombre: "Agua", monto: 90000 },
+    { nombre: "Internet y teléfono", monto: 60000 },
   ],
 
   // ---------- Calendario de pagos y cobros grandes (próximos 90 días) ----------
@@ -149,7 +183,7 @@ window.DEMO_DATOS = {
     marketing: [
       { nombre: "Ventas de octubre", valor: "$28,3 M", detalle: "+1,5% vs. septiembre" },
       { nombre: "Ventas reales (3 meses)", valor: "−6,9%", detalle: "Descontada la inflación", tono: "riesgo" },
-      { nombre: "Ticket promedio", valor: "$15.404", detalle: "+0,8% real en 3 meses" },
+      { nombre: "Ticket promedio", valor: "$5.135", detalle: "≈ 178 ventas por día · +0,8% real en 3 meses" },
       { nombre: "Costo por cliente nuevo", valor: "$6.885", detalle: "61 clientes nuevos en el mes", tono: "bien" },
     ],
     operaciones: [
@@ -171,7 +205,7 @@ window.DEMO_DATOS = {
     ],
     marketing: [
       { nombre: "Ventas reales (3 meses)", puntaje: 28, valor: "−6,9%", ayuda: "Cuánto cambiaron las ventas descontando la inflación: si vendés más pesos pero menos productos, acá se ve." },
-      { nombre: "Clientes activos (3 meses)", puntaje: 39, valor: "−4,0%", ayuda: "Cuántos clientes distintos compran cada mes." },
+      { nombre: "Clientes registrados (3 meses)", puntaje: 39, valor: "−4,0%", ayuda: "Clientes que conocés por WhatsApp o cuenta corriente y que compraron en el mes." },
       { nombre: "Ticket promedio real", puntaje: 63, valor: "+0,8%", ayuda: "Cuánto gasta cada cliente por compra, descontando la inflación." },
       { nombre: "Costo de conseguir un cliente", puntaje: 100, valor: "$6.885", ayuda: "Lo que gastaste en publicidad dividido por los clientes nuevos del mes." },
     ],
@@ -257,6 +291,22 @@ window.DEMO_DATOS = {
           ],
         },
         {
+          id: "cfo-separar",
+          pregunta: "¿Cuánto tengo que separar por mes?",
+          parrafos: [
+            "Noviembre es un mes pesado porque se juntan el aguinaldo y la compra del pan dulce. Este mes conviene separar unos $8,2 M:",
+          ],
+          pasos: [
+            "Aguinaldo del 18 de diciembre: $3 M ($693 mil por semana).",
+            "Frutas secas del pan dulce, que se pagan el 6 de enero: $3,8 M.",
+            "Vacaciones del equipo: $530 mil.",
+            "Fondo para imprevistos: $850 mil.",
+          ],
+          parrafosFinales: [
+            "No sale todo de lo que ganás en el mes: una parte sale de los $18,6 M que tenés hoy. En un mes normal alcanza con unos $1,8 M. Te recomiendo abrir una cuenta aparte solo para esta plata, así no se mezcla con la caja del día.",
+          ],
+        },
+        {
           id: "cfo-precios",
           pregunta: "¿Me conviene subir precios este mes?",
           parrafos: [
@@ -323,7 +373,7 @@ window.DEMO_DATOS = {
           id: "cmo-recuperar",
           pregunta: "¿Cómo recupero a los clientes que dejaron de venir?",
           parrafos: [
-            "Pasaste de 718 clientes activos en julio a 689 en octubre: unos 29 menos. Y los clientes nuevos bajaron de 71 a 61 por mes.",
+            "De los clientes que tenés registrados (por WhatsApp o cuenta corriente), en julio compraron 718 y en octubre 689: unos 29 menos. Y los clientes nuevos bajaron de 71 a 61 por mes.",
             "Una opción: mandales un mensaje a quienes no compran hace más de un mes, con un beneficio simple y con fecha (por ejemplo, 10% en la docena de facturas hasta el domingo).",
             "Después medí cuántos vuelven en las dos semanas siguientes. Si funciona, repetilo una vez por mes.",
           ],

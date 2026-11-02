@@ -22,8 +22,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css?v=10">
-  <link rel="stylesheet" href="css/demo.css?v=10">
+  <link rel="stylesheet" href="css/styles.css?v=11">
+  <link rel="stylesheet" href="css/demo.css?v=11">
 </head>
 <body class="demo-app">
   <a class="saltar-al-contenido" href="#contenido">Saltar al contenido</a>
@@ -323,6 +323,60 @@
           </div>
 
           <div class="grilla grilla--2">
+            <section class="caja" aria-labelledby="t-reservas">
+              <div class="caja__cabecera caja__cabecera--envuelve">
+                <div class="caja__con-icono">
+                  <span class="icono-caja icono-caja--verde" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/><path d="M21 7h-6a3 3 0 0 0 0 6h6z"/><path d="M15 10h.01"/></svg></span>
+                  <div>
+                    <h2 class="caja__titulo" id="t-reservas">Plata para separar</h2>
+                    <p class="caja__sub">Aguinaldo, compras de temporada e imprevistos</p>
+                  </div>
+                </div>
+                <button class="boton-chico" type="button" data-consulta="cfo-separar">Preguntarle a tu CFO</button>
+              </div>
+              <div class="reservas__total" id="reservas-total"></div>
+              <ul class="reservas" id="reservas"></ul>
+              <p class="nota" id="reserva-normal"></p>
+            </section>
+
+            <section class="caja" aria-labelledby="t-proveedores">
+              <div class="caja__cabecera">
+                <div class="caja__con-icono">
+                  <span class="icono-caja" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>
+                  <div>
+                    <h2 class="caja__titulo" id="t-proveedores">Proveedores y distribuidores</h2>
+                    <p class="caja__sub" id="proveedores-sub"></p>
+                  </div>
+                </div>
+              </div>
+              <ul class="proveedores" id="proveedores"></ul>
+              <p class="nota">Las subas son desde julio. La inflación en ese período fue 5,6%.</p>
+            </section>
+          </div>
+
+          <div class="grilla grilla--2">
+            <section class="caja" aria-labelledby="t-cada100">
+              <div class="caja__cabecera">
+                <div>
+                  <h2 class="caja__titulo" id="t-cada100">De cada $100 que vendés</h2>
+                  <p class="caja__sub">Así se repartió lo que vendió La Espiga en octubre</p>
+                </div>
+              </div>
+              <div class="cada100" id="cada100"></div>
+            </section>
+
+            <section class="caja" aria-labelledby="t-fijos">
+              <div class="caja__cabecera">
+                <div>
+                  <h2 class="caja__titulo" id="t-fijos">Gastos fijos del mes</h2>
+                  <p class="caja__sub">Lo que se paga todos los meses, se venda lo que se venda</p>
+                </div>
+              </div>
+              <ul class="fijos" id="fijos"></ul>
+            </section>
+          </div>
+
+          <div class="grilla grilla--2">
             <section class="caja" aria-labelledby="t-cobros">
               <h2 class="caja__titulo" id="t-cobros">Lo que te deben</h2>
               <p class="caja__sub">Cuentas por cobrar a clientes</p>
@@ -383,8 +437,8 @@
             <section class="caja" aria-labelledby="t-clientes">
               <div class="caja__cabecera">
                 <div>
-                  <h2 class="caja__titulo" id="t-clientes">Clientes activos por mes</h2>
-                  <p class="caja__sub">Clientes distintos que compraron cada mes</p>
+                  <h2 class="caja__titulo" id="t-clientes">Clientes registrados por mes</h2>
+                  <p class="caja__sub">Los que conocés por WhatsApp o cuenta corriente y compraron en el mes</p>
                 </div>
               </div>
               <div id="grafico-clientes"></div>
@@ -486,7 +540,7 @@
   </aside>
 
   <script src="js/config.js"></script>
-  <script src="js/demo-datos.js?v=10"></script>
-  <script src="js/demo.js?v=10"></script>
+  <script src="js/demo-datos.js?v=11"></script>
+  <script src="js/demo.js?v=11"></script>
 </body>
 </html>
